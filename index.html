@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Alana Albuquerque - Estética Feminina</title>
+    <meta name="description" content="Clínica de estética feminina especializada em procedimentos como drenagem linfática, criolipólise e massagem modeladora.">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8A7142',
+                        light: '#E5E0D8'
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-opensans bg-light">
+    <!-- Cabeçalho/Menu de navegação -->
+    <header class="fixed top-0 left-0 right-0 bg-primary shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/img/logoAlana.jpg" alt="Clínica Alana Albuquerque" class="h-12 mr-2">
+            </a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Home</a>
+                <a href="sobre.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Sobre Nós</a>
+                <a href="servicos.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Serviços</a>
+                <a href="contato.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Contato</a>
+                <a href="blog.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Blog</a>
+            </div>
+            
+            <!-- Botão Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-light hover:text-light/70 transition-colors">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="hidden bg-primary w-full py-2 px-4 md:hidden">
+            <a href="index.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Home</a>
+            <a href="sobre.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Sobre Nós</a>
+            <a href="servicos.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Serviços</a>
+            <a href="contato.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Contato</a>
+            <a href="blog.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Blog</a>
+        </div>
+    </header>
+
+    <main class="pt-24"> <!-- Padding top para compensar o header fixo -->
+        <!-- Banner Principal -->
+        <section class="relative h-[80vh] flex items-center justify-center bg-light">
+            <img src="assets/img/bg-header.jpg" alt="Banner Clínica Alana Albuquerque" class="absolute inset-0 w-full h-full object-cover opacity-60">
+            <div class="container mx-auto px-4 z-10 text-center">
+                <h1 class="font-montserrat font-bold text-3xl md:text-5xl text-light mb-8">
+                    Transforme sua beleza com a Clínica Alana Albuquerque
+                </h1>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="servicos.html" class="bg-primary text-light py-3 px-6 rounded shadow-md hover:bg-primary/80 transition-colors font-montserrat">
+                        Conheça Nossos Serviços
+                    </a>
+                    <a href="https://wa.me/5581971202071?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="bg-primary text-light py-3 px-6 rounded shadow-md hover:bg-primary/80 transition-colors font-montserrat border border-primary">
+                        Agende Sua Consulta
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Introdução -->
+        <section class="py-16 bg-light">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="font-montserrat font-bold text-2xl md:text-4xl text-primary mb-8">
+                    Bem-vinda à Clínica Alana Albuquerque
+                </h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-12">
+                    Seu espaço dedicado à estética e bem-estar feminino. Aqui, cada tratamento é personalizado para realçar sua beleza natural e proporcionar bem-estar completo.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-light p-6 rounded-lg shadow-md border border-primary/20">
+                        <i class="fas fa-spa text-4xl text-primary mb-4"></i>
+                        <h3 class="font-montserrat font-medium text-xl mb-2">Tratamentos Exclusivos</h3>
+                        <p>Procedimentos estéticos desenvolvidos para atender às necessidades específicas de cada mulher.</p>
+                    </div>
+                    <div class="bg-light p-6 rounded-lg shadow-md border border-primary/20">
+                        <i class="fas fa-certificate text-4xl text-primary mb-4"></i>
+                        <h3 class="font-montserrat font-medium text-xl mb-2">Profissionais Qualificados</h3>
+                        <p>Equipe altamente treinada e atualizada com as mais recentes técnicas de estética.</p>
+                    </div>
+                    <div class="bg-light p-6 rounded-lg shadow-md border border-primary/20">
+                        <i class="fas fa-heart text-4xl text-primary mb-4"></i>
+                        <h3 class="font-montserrat font-medium text-xl mb-2">Ambiente Acolhedor</h3>
+                        <p>Espaço projetado para proporcionar conforto e tranquilidade durante seu tratamento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Persuasiva sobre Procedimentos Estéticos -->
+        <section class="py-16 bg-primary/5">
+            <div class="container mx-auto px-4">
+                <h2 class="font-montserrat font-bold text-2xl md:text-4xl text-primary mb-8 text-center">
+                    Por que investir em procedimentos estéticos?
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://images.pexels.com/photos/3764013/pexels-photo-3764013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Bem-estar e autoestima" class="rounded-lg shadow-lg w-full">
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-light p-6 rounded-lg shadow-md border-l-4 border-primary">
+                            <h3 class="font-montserrat font-medium text-xl mb-2 text-primary">Autoestima e Bem-estar</h3>
+                            <p>Estudos mostram que 94% das pessoas relatam aumento significativo da autoestima após procedimentos estéticos. Cuidar de si mesma não é vaidade, é amor-próprio e investimento em qualidade de vida.</p>
+                        </div>
+                        
+                        <div class="bg-light p-6 rounded-lg shadow-md border-l-4 border-primary">
+                            <h3 class="font-montserrat font-medium text-xl mb-2 text-primary">Tecnologia a Seu Favor</h3>
+                            <p>A evolução tecnológica trouxe procedimentos mais seguros, menos invasivos e com resultados surpreendentes. Hoje é possível transformar sua aparência sem dor e com mínimo tempo de recuperação.</p>
+                        </div>
+                        
+                        <div class="bg-light p-6 rounded-lg shadow-md border-l-4 border-primary">
+                            <h3 class="font-montserrat font-medium text-xl mb-2 text-primary">Resultados Cientificamente Comprovados</h3>
+                            <p>Nossos tratamentos são baseados em estudos científicos e protocolos internacionalmente reconhecidos. Cada sessão é um passo seguro em direção aos resultados que você deseja.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <a href="servicos.html" class="bg-primary text-light py-3 px-8 rounded-lg shadow-md hover:bg-primary/80 transition-colors font-montserrat inline-block">
+                        Transforme sua vida hoje mesmo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrossel de Depoimentos -->
+        <section class="py-16 bg-primary/10">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="font-montserrat font-bold text-2xl md:text-4xl text-primary mb-12">
+                    O que nossas clientes dizem
+                </h2>
+                
+                <div id="testimonial-carousel" class="relative max-w-4xl mx-auto">
+                    <div class="testimonial-slide active opacity-100 transition-opacity duration-500">
+                        <div class="bg-light p-8 rounded-lg shadow-md">
+                            <div class="flex items-center mb-6">
+                                <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Maria Silva" class="w-16 h-16 rounded-full object-cover mr-4">
+                                <div class="text-left">
+                                    <p class="font-montserrat font-medium">Maria Silva</p>
+                                    <div class="text-primary text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-lg italic mb-3">"Amei a drenagem linfática! Os resultados foram visíveis logo na primeira sessão. O atendimento é impecável e o ambiente super aconchegante."</p>
+                            <p class="text-sm text-gray-600">Cliente há 8 meses</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide hidden opacity-0 transition-opacity duration-500">
+                        <div class="bg-light p-8 rounded-lg shadow-md">
+                            <div class="flex items-center mb-6">
+                                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Juliana Mendes" class="w-16 h-16 rounded-full object-cover mr-4">
+                                <div class="text-left">
+                                    <p class="font-montserrat font-medium">Juliana Mendes</p>
+                                    <div class="text-primary text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-lg italic mb-3">"A criolipólise mudou minha vida! Após três meses, consegui reduzir bastante a gordura localizada. A equipe da Alana é super atenciosa e profissional."</p>
+                            <p class="text-sm text-gray-600">Cliente há 5 meses</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide hidden opacity-0 transition-opacity duration-500">
+                        <div class="bg-light p-8 rounded-lg shadow-md">
+                            <div class="flex items-center mb-6">
+                                <img src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Carla Oliveira" class="w-16 h-16 rounded-full object-cover mr-4">
+                                <div class="text-left">
+                                    <p class="font-montserrat font-medium">Carla Oliveira</p>
+                                    <div class="text-primary text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-lg italic mb-3">"Frequento a Clínica Alana há mais de um ano e sempre saio satisfeita! A massagem modeladora é minha preferida, recomendo para todas as mulheres."</p>
+                            <p class="text-sm text-gray-600">Cliente há 1 ano</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Controles do carrossel -->
+                    <div class="flex justify-center mt-8">
+                        <button id="prev-testimonial" class="bg-primary text-light w-10 h-10 rounded-full flex items-center justify-center mx-2 hover:bg-primary/80 transition-colors">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="flex space-x-2">
+                            <span class="testimonial-dot active w-3 h-3 rounded-full bg-primary cursor-pointer"></span>
+                            <span class="testimonial-dot w-3 h-3 rounded-full bg-primary/30 cursor-pointer"></span>
+                            <span class="testimonial-dot w-3 h-3 rounded-full bg-primary/30 cursor-pointer"></span>
+                        </div>
+                        <button id="next-testimonial" class="bg-primary text-light w-10 h-10 rounded-full flex items-center justify-center mx-2 hover:bg-primary/80 transition-colors">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-primary/10 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Clínica Alana Albuquerque</h3>
+                    <p class="mb-4">Seu espaço dedicado à estética e bem-estar feminino. Venha nos conhecer!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-primary transition-colors">Sobre Nós</a></li>
+                        <li><a href="servicos.html" class="hover:text-primary transition-colors">Serviços</a></li>
+                        <li><a href="contato.html" class="hover:text-primary transition-colors">Contato</a></li>
+                        <li><a href="blog.html" class="hover:text-primary transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Contato</h3>
+                    <address class="not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt text-primary mr-2"></i> Rua das Flores, 123, Centro</p>
+                        <p class="mb-2"><i class="fas fa-phone text-primary mr-2"></i> (XX) 9 1234-5678</p>
+                        <p class="mb-2"><i class="fas fa-envelope text-primary mr-2"></i> contato@clinicaalanaalbuquerque.com</p>
+                        <p><i class="fas fa-clock text-primary mr-2"></i> Seg-Sex: 9h-18h | Sáb: 9h-13h</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-primary/20 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Clínica Alana Albuquerque. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp flutuante -->
+    <a href="https://wa.me/559912345678?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="fixed bottom-6 right-6 bg-primary text-light p-3 rounded-full shadow-lg hover:bg-primary/80 transition-colors z-50 whatsapp-float">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

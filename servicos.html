@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Clínica Alana Albuquerque</title>
+    <meta name="description" content="Conheça nossos serviços de estética feminina, incluindo drenagem linfática, criolipólise, massagem modeladora e mais.">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8A7142',
+                        light: '#E5E0D8'
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-opensans bg-light">
+    <!-- Cabeçalho/Menu de navegação -->
+    <header class="fixed top-0 left-0 right-0 bg-primary shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/img/logoAlana.jpg" alt="Clínica Alana Albuquerque" class="h-12 mr-2">
+            </a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Home</a>
+                <a href="sobre.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Sobre Nós</a>
+                <a href="servicos.html" class="font-montserrat text-light hover:text-light/70 transition-colors font-medium">Serviços</a>
+                <a href="contato.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Contato</a>
+                <a href="blog.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Blog</a>
+            </div>
+            
+            <!-- Botão Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-light hover:text-light/70 transition-colors">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="hidden bg-primary w-full py-2 px-4 md:hidden">
+            <a href="index.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Home</a>
+            <a href="sobre.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Sobre Nós</a>
+            <a href="servicos.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors font-medium">Serviços</a>
+            <a href="contato.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Contato</a>
+            <a href="blog.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Blog</a>
+        </div>
+    </header>
+
+    <main class="pt-24"> <!-- Padding top para compensar o header fixo -->
+        <!-- Banner de Serviços -->
+        <section class="py-12 bg-primary/10">
+            <div class="container mx-auto px-4">
+                <h1 class="font-montserrat font-bold text-3xl md:text-4xl text-primary text-center mb-8">
+                    Nossos Serviços
+                </h1>
+                <p class="text-lg max-w-3xl mx-auto text-center mb-12">
+                    Oferecemos uma variedade de tratamentos estéticos personalizados para atender as necessidades específicas de cada cliente, com foco em resultados e bem-estar.
+                </p>
+            </div>
+        </section>
+
+        <!-- Categorias de Serviços -->
+        <section class="py-12 bg-light">
+            <div class="container mx-auto px-4">
+                <h2 class="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-12 text-center">
+                    Conheça Nossos Tratamentos
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Drenagem Linfática -->
+                    <div class="bg-light rounded-lg shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3764013/pexels-photo-3764013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Drenagem Linfática" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-montserrat font-medium text-xl text-primary mb-3">Drenagem Linfática</h3>
+                            <p class="mb-4">A drenagem linfática é uma técnica de massagem que estimula o sistema linfático, ajudando a eliminar toxinas e líquidos do corpo, reduzindo o inchaço e melhorando a circulação.</p>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Reduz inchaços e retenção de líquidos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Melhora a circulação sanguínea</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Acelera a recuperação pós-cirúrgica</span>
+                                </li>
+                            </ul>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-montserrat font-bold text-lg">A partir de R$ 120,00</span>
+                                <a href="contato.html" class="bg-primary text-light py-2 px-4 rounded hover:bg-primary/80 transition-colors">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Criolipólise -->
+                    <div class="bg-light rounded-lg shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/7089401/pexels-photo-7089401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Criolipólise" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-montserrat font-medium text-xl text-primary mb-3">Criolipólise</h3>
+                            <p class="mb-4">A criolipólise é um procedimento não invasivo que congela e elimina as células de gordura, ajudando a reduzir medidas em áreas específicas sem necessidade de cirurgia.</p>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Redução de gordura localizada</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Procedimento não invasivo</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Resultados duradouros</span>
+                                </li>
+                            </ul>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-montserrat font-bold text-lg">A partir de R$ 350,00</span>
+                                <a href="contato.html" class="bg-primary text-light py-2 px-4 rounded hover:bg-primary/80 transition-colors">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Massagem Modeladora -->
+                    <div class="bg-light rounded-lg shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/5240677/pexels-photo-5240677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Massagem Modeladora" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-montserrat font-medium text-xl text-primary mb-3">Massagem Modeladora</h3>
+                            <p class="mb-4">A massagem modeladora é uma técnica que combina movimentos vigorosos e profundos para remodelar o corpo, combater a celulite e a flacidez, melhorando o contorno corporal.</p>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Reduz medidas e celulite</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Combate a flacidez</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Melhora a circulação e o tônus da pele</span>
+                                </li>
+                            </ul>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-montserrat font-bold text-lg">A partir de R$ 150,00</span>
+                                <a href="contato.html" class="bg-primary text-light py-2 px-4 rounded hover:bg-primary/80 transition-colors">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Limpeza de Pele -->
+                    <div class="bg-light rounded-lg shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Limpeza de Pele" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-montserrat font-medium text-xl text-primary mb-3">Limpeza de Pele</h3>
+                            <p class="mb-4">A limpeza de pele profunda remove impurezas, cravos e células mortas, promovendo uma pele mais saudável, luminosa e preparada para absorver melhor os produtos de tratamento.</p>
+                            <ul class="mb-6 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Remove impurezas e cravos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Melhora a textura e aparência da pele</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                    <span>Previne acne e problemas de pele</span>
+                                </li>
+                            </ul>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-montserrat font-bold text-lg">A partir de R$ 130,00</span>
+                                <a href="contato.html" class="bg-primary text-light py-2 px-4 rounded hover:bg-primary/80 transition-colors">Agendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pacotes Promocionais -->
+        <section class="py-12 bg-primary/10">
+            <div class="container mx-auto px-4">
+                <h2 class="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-12 text-center">
+                    Pacotes Promocionais
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Pacote Iniciante -->
+                    <div class="bg-light rounded-lg shadow-md p-6 border-t-4 border-primary">
+                        <h3 class="font-montserrat font-medium text-xl text-primary mb-4 text-center">
+                            Pacote Iniciante
+                        </h3>
+                        <div class="text-center mb-6">
+                            <span class="text-3xl font-bold">R$ 399</span>
+                            <span class="text-sm">/mês</span>
+                        </div>
+                        <ul class="mb-8 space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>2 sessões de drenagem linfática</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>1 sessão de massagem modeladora</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Avaliação corporal completa</span>
+                            </li>
+                        </ul>
+                        <a href="contato.html" class="block bg-primary text-light text-center py-2 rounded hover:bg-primary/80 transition-colors">
+                            Contratar Pacote
+                        </a>
+                    </div>
+                    
+                    <!-- Pacote Premium -->
+                    <div class="bg-light rounded-lg shadow-md p-6 border-t-4 border-primary transform scale-105">
+                        <div class="bg-primary text-light py-1 px-4 rounded-full text-xs font-bold uppercase inline-block mb-2">Mais Popular</div>
+                        <h3 class="font-montserrat font-medium text-xl text-primary mb-4 text-center">
+                            Pacote Premium
+                        </h3>
+                        <div class="text-center mb-6">
+                            <span class="text-3xl font-bold">R$ 699</span>
+                            <span class="text-sm">/mês</span>
+                        </div>
+                        <ul class="mb-8 space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>4 sessões de drenagem linfática</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>2 sessões de massagem modeladora</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>1 sessão de criolipólise</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Avaliação corporal mensal</span>
+                            </li>
+                        </ul>
+                        <a href="contato.html" class="block bg-primary text-light text-center py-2 rounded hover:bg-primary/80 transition-colors">
+                            Contratar Pacote
+                        </a>
+                    </div>
+                    
+                    <!-- Pacote VIP -->
+                    <div class="bg-light rounded-lg shadow-md p-6 border-t-4 border-primary">
+                        <h3 class="font-montserrat font-medium text-xl text-primary mb-4 text-center">
+                            Pacote VIP
+                        </h3>
+                        <div class="text-center mb-6">
+                            <span class="text-3xl font-bold">R$ 999</span>
+                            <span class="text-sm">/mês</span>
+                        </div>
+                        <ul class="mb-8 space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>4 sessões de drenagem linfática</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>4 sessões de massagem modeladora</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>2 sessões de criolipólise</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>1 limpeza de pele profunda</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Acompanhamento nutricional</span>
+                            </li>
+                        </ul>
+                        <a href="contato.html" class="block bg-primary text-light text-center py-2 rounded hover:bg-primary/80 transition-colors">
+                            Contratar Pacote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção CTA -->
+        <section class="py-16 bg-light">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-6">
+                    Pronta para cuidar da sua beleza?
+                </h2>
+                <p class="max-w-3xl mx-auto mb-8 text-lg">
+                    Entre em contato conosco hoje mesmo e agende uma avaliação gratuita. Nossa equipe está pronta para desenvolver um plano de tratamento personalizado para você.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="contato.html" class="bg-primary text-light py-3 px-6 rounded shadow-md hover:bg-primary/80 transition-colors font-montserrat">
+                        Agendar Avaliação Gratuita
+                    </a>
+                    <a href="https://wa.me/5581971202071?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços" target="_blank" class="bg-light text-primary py-3 px-6 rounded shadow-md hover:bg-primary/10 transition-colors font-montserrat border border-primary">
+                        <i class="fab fa-whatsapp mr-2"></i> Fale Conosco no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-primary/10 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Clínica Alana Albuquerque</h3>
+                    <p class="mb-4">Seu espaço dedicado à estética e bem-estar feminino. Venha nos conhecer!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-primary transition-colors">Sobre Nós</a></li>
+                        <li><a href="servicos.html" class="hover:text-primary transition-colors">Serviços</a></li>
+                        <li><a href="contato.html" class="hover:text-primary transition-colors">Contato</a></li>
+                        <li><a href="blog.html" class="hover:text-primary transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Contato</h3>
+                    <address class="not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt text-primary mr-2"></i> Rua das Flores, 123, Centro</p>
+                        <p class="mb-2"><i class="fas fa-phone text-primary mr-2"></i> (XX) 9 1234-5678</p>
+                        <p class="mb-2"><i class="fas fa-envelope text-primary mr-2"></i> contato@clinicaalanaalbuquerque.com</p>
+                        <p><i class="fas fa-clock text-primary mr-2"></i> Seg-Sex: 9h-18h | Sáb: 9h-13h</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-primary/20 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Clínica Alana Albuquerque. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp flutuante -->
+    <a href="https://wa.me/559912345678?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="fixed bottom-6 right-6 bg-primary text-light p-3 rounded-full shadow-lg hover:bg-primary/80 transition-colors z-50 whatsapp-float">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

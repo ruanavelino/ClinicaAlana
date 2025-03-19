@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Clínica Alana Albuquerque</title>
+    <meta name="description" content="Blog sobre estética feminina, cuidados com a pele e o corpo da Clínica Alana Albuquerque. Dicas, informações e novidades.">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#94714D',
+                        white: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-opensans bg-white">
+    <!-- Cabeçalho/Menu de navegação -->
+    <header class="fixed top-0 left-0 right-0 bg-primary shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-montserrat font-bold text-white">
+                Clínica Alana Albuquerque
+            </a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="font-montserrat text-white hover:text-white/70 transition-colors">Home</a>
+                <a href="sobre.html" class="font-montserrat text-white hover:text-white/70 transition-colors">Sobre Nós</a>
+                <a href="servicos.html" class="font-montserrat text-white hover:text-white/70 transition-colors">Serviços</a>
+                <a href="contato.html" class="font-montserrat text-white hover:text-white/70 transition-colors">Contato</a>
+                <a href="blog.html" class="font-montserrat text-white hover:text-white/70 transition-colors font-medium">Blog</a>
+            </div>
+            
+            <!-- Botão Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-white hover:text-white/70 transition-colors">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="hidden bg-primary w-full py-2 px-4 md:hidden">
+            <a href="index.html" class="block py-2 font-montserrat text-white hover:text-white/70 transition-colors">Home</a>
+            <a href="sobre.html" class="block py-2 font-montserrat text-white hover:text-white/70 transition-colors">Sobre Nós</a>
+            <a href="servicos.html" class="block py-2 font-montserrat text-white hover:text-white/70 transition-colors">Serviços</a>
+            <a href="contato.html" class="block py-2 font-montserrat text-white hover:text-white/70 transition-colors">Contato</a>
+            <a href="blog.html" class="block py-2 font-montserrat text-white hover:text-white/70 transition-colors font-medium">Blog</a>
+        </div>
+    </header>
+
+    <main class="pt-24"> <!-- Padding top para compensar o header fixo -->
+        <!-- Banner da página Blog -->
+        <section class="bg-primary/10 py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="font-montserrat font-bold text-3xl md:text-5xl text-primary mb-6">
+                    Blog de Estética
+                </h1>
+                <p class="text-lg max-w-3xl mx-auto">
+                    Dicas, informações e tendências sobre os mais diversos assuntos relacionados à beleza e estética feminina
+                </p>
+            </div>
+        </section>
+
+        <!-- Artigos principais destacados -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-12 text-center">
+                    Artigos em Destaque
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Artigo 1: Drenagem Linfática -->
+                    <article class="bg-white bg-opacity-30 rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/800x500/FFFFFF/94714D?text=Drenagem+Linfática" alt="Benefícios da Drenagem Linfática" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs text-primary font-montserrat uppercase tracking-wider">Tratamentos Corporais</span>
+                            <h3 class="font-montserrat font-bold text-xl mt-2 mb-3 hover:text-primary transition-colors">
+                                <a href="#artigo-drenagem">Benefícios da Drenagem Linfática que Você Precisa Conhecer</a>
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                A drenagem linfática é muito mais do que um tratamento estético. Descubra como esse procedimento pode melhorar sua saúde e bem-estar geral, além de combater a retenção de líquidos.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">
+                                    <i class="far fa-calendar-alt mr-1"></i> 15 de Junho, 2023
+                                </span>
+                                <a href="#artigo-drenagem" class="text-primary font-montserrat hover:text-primary transition-colors">
+                                    Leia mais <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Artigo 2: Criolipólise -->
+                    <article class="bg-white bg-opacity-30 rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/800x500/FFFFFF/94714D?text=Criolipólise" alt="Como Funciona a Criolipólise" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs text-primary font-montserrat uppercase tracking-wider">Gordura Localizada</span>
+                            <h3 class="font-montserrat font-bold text-xl mt-2 mb-3 hover:text-primary transition-colors">
+                                <a href="#artigo-criolipolise">Como Funciona a Criolipólise: Tudo que Você Precisa Saber</a>
+                            </h3>
+                            <p class="text-gray-700 mb-4">
+                                Entenda o processo de congelamento das células de gordura, os resultados esperados e por que a criolipólise se tornou uma das alternativas mais populares à lipoaspiração tradicional.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">
+                                    <i class="far fa-calendar-alt mr-1"></i> 10 de Junho, 2023
+                                </span>
+                                <a href="#artigo-criolipolise" class="text-primary font-montserrat hover:text-primary transition-colors">
+                                    Leia mais <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artigo completo: Drenagem Linfática -->
+        <section id="artigo-drenagem" class="py-16 bg-white border-t border-primary/20">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="mb-8">
+                    <span class="text-sm text-primary font-montserrat uppercase tracking-wider">Tratamentos Corporais</span>
+                    <h2 class="font-montserrat font-bold text-3xl text-primary mt-2 mb-3">
+                        Benefícios da Drenagem Linfática que Você Precisa Conhecer
+                    </h2>
+                    <div class="flex items-center text-sm text-gray-500 mb-8">
+                        <span class="mr-4"><i class="far fa-calendar-alt mr-1"></i> 15 de Junho, 2023</span>
+                        <span><i class="far fa-user mr-1"></i> Por Alana Albuquerque</span>
+                    </div>
+                </div>
+
+                <img src="https://placehold.co/1200x600/FFFFFF/94714D?text=Drenagem+Linfática" alt="Drenagem Linfática" class="w-full h-96 object-cover rounded-lg shadow-lg mb-8">
+
+                <div class="prose max-w-none">
+                    <p class="mb-4">
+                        A drenagem linfática é uma técnica de massagem suave e rítmica que tem como objetivo principal estimular o sistema linfático a trabalhar de forma mais eficiente. Este procedimento vai muito além da estética, pois também proporciona diversos benefícios para a saúde e bem-estar geral.
+                    </p>
+                    
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">O que é o sistema linfático?</h3>
+                    <p class="mb-4">
+                        Antes de entendermos os benefícios da drenagem, é importante conhecer o sistema linfático. Este sistema é parte do sistema imunológico e consiste em uma rede de vasos, linfonodos e órgãos que transportam a linfa – um fluido que contém glóbulos brancos que ajudam a combater infecções – por todo o corpo.
+                    </p>
+                    <p class="mb-4">
+                        Quando o sistema linfático está congestionado ou funcionando de forma inadequada, pode ocorrer acúmulo de líquidos nos tecidos, causando inchaço (edema) e sensação de peso nos membros.
+                    </p>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Principais benefícios da drenagem linfática</h3>
+                    <ol class="list-decimal pl-6 mb-6 space-y-2">
+                        <li>
+                            <strong>Redução de inchaço:</strong> A técnica é extremamente eficaz na redução de edemas, especialmente nas pernas, tornozelos e pés, áreas onde a retenção de líquidos é mais comum.
+                        </li>
+                        <li>
+                            <strong>Melhora da circulação:</strong> A drenagem estimula tanto a circulação sanguínea quanto a linfática, promovendo melhor oxigenação dos tecidos.
+                        </li>
+                        <li>
+                            <strong>Eliminação de toxinas:</strong> Ajuda o corpo a eliminar toxinas e resíduos metabólicos através do sistema linfático.
+                        </li>
+                        <li>
+                            <strong>Fortalecimento do sistema imunológico:</strong> Ao promover o bom funcionamento do sistema linfático, contribui para o fortalecimento das defesas naturais do organismo.
+                        </li>
+                        <li>
+                            <strong>Redução da celulite:</strong> A melhora na circulação sanguínea e linfática ajuda a minimizar a aparência da celulite.
+                        </li>
+                        <li>
+                            <strong>Efeito relaxante:</strong> Por ser uma técnica suave e rítmica, proporciona relaxamento muscular e alívio do estresse.
+                        </li>
+                        <li>
+                            <strong>Auxílio no pós-operatório:</strong> É frequentemente recomendada após cirurgias plásticas para acelerar a recuperação, reduzir edemas e prevenir fibroses.
+                        </li>
+                    </ol>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Quem deve fazer drenagem linfática?</h3>
+                    <p class="mb-4">
+                        A drenagem linfática é indicada para pessoas que:
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li>Sofrem com retenção de líquidos</li>
+                        <li>Apresentam edemas (inchaços) frequentes nos membros</li>
+                        <li>Estão em recuperação de cirurgias estéticas ou outras intervenções cirúrgicas</li>
+                        <li>Desejam melhorar a aparência da celulite</li>
+                        <li>Sentem as pernas cansadas e pesadas, especialmente no final do dia</li>
+                        <li>Buscam uma técnica complementar para redução de medidas</li>
+                        <li>Desejam fortalecer o sistema imunológico</li>
+                    </ul>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Contraindicações</h3>
+                    <p class="mb-4">
+                        Apesar de seus diversos benefícios, a drenagem linfática não é recomendada para pessoas com:
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li>Infecções agudas ou febre</li>
+                        <li>Trombose recente</li>
+                        <li>Insuficiência cardíaca descompensada</li>
+                        <li>Câncer em tratamento (a menos que haja autorização médica)</li>
+                        <li>Feridas abertas ou inflamações cutâneas na área a ser tratada</li>
+                    </ul>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Conclusão</h3>
+                    <p class="mb-4">
+                        A drenagem linfática é uma técnica com múltiplos benefícios, aliando efeitos estéticos a melhorias significativas na saúde geral. É importante, porém, que seja realizada por profissionais capacitados, que conhecem a anatomia do sistema linfático e dominam a técnica correta.
+                    </p>
+                    <p class="mb-4">
+                        Na Clínica Alana Albuquerque, contamos com profissionais especializados em drenagem linfática, que irão avaliar suas necessidades específicas e desenvolver um plano de tratamento personalizado para alcançar os melhores resultados.
+                    </p>
+                    <p>
+                        Entre em contato conosco e agende sua sessão de drenagem linfática. Seu corpo agradece!
+                    </p>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://wa.me/559912345678?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão%20de%20Drenagem%20Linfática" target="_blank" class="bg-primary text-white py-3 px-6 rounded shadow-md hover:bg-primary/80 transition-colors font-montserrat inline-block">
+                        Agende Sua Sessão de Drenagem Linfática
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artigo completo: Criolipólise -->
+        <section id="artigo-criolipolise" class="py-16 bg-white border-t border-primary/20">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="mb-8">
+                    <span class="text-sm text-primary font-montserrat uppercase tracking-wider">Gordura Localizada</span>
+                    <h2 class="font-montserrat font-bold text-3xl text-primary mt-2 mb-3">
+                        Como Funciona a Criolipólise: Tudo que Você Precisa Saber
+                    </h2>
+                    <div class="flex items-center text-sm text-gray-500 mb-8">
+                        <span class="mr-4"><i class="far fa-calendar-alt mr-1"></i> 10 de Junho, 2023</span>
+                        <span><i class="far fa-user mr-1"></i> Por Juliana Santos</span>
+                    </div>
+                </div>
+
+                <img src="https://placehold.co/1200x600/FFFFFF/94714D?text=Criolipólise" alt="Criolipólise" class="w-full h-96 object-cover rounded-lg shadow-lg mb-8">
+
+                <div class="prose max-w-none">
+                    <p class="mb-4">
+                        Você já deve ter ouvido falar sobre a criolipólise, um dos tratamentos estéticos mais populares para redução de gordura localizada. Mas você sabe exatamente como ela funciona e quais resultados pode esperar? Neste artigo, vamos explorar todos os aspectos desse procedimento inovador.
+                    </p>
+                    
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">O que é a criolipólise?</h3>
+                    <p class="mb-4">
+                        A criolipólise é um procedimento estético não invasivo que utiliza o frio controlado para eliminar células de gordura em áreas específicas do corpo. O nome vem da junção dos termos "crio" (frio) e "lipólise" (quebra de gordura).
+                    </p>
+                    <p class="mb-4">
+                        Esta técnica foi desenvolvida com base na observação de que as células de gordura são mais sensíveis ao frio do que outros tecidos do corpo. Assim, ao expor determinada área a temperaturas baixas controladas, é possível promover a morte das células adiposas sem causar danos à pele, músculos ou nervos adjacentes.
+                    </p>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Como funciona o procedimento?</h3>
+                    <p class="mb-4">
+                        Durante a sessão de criolipólise, o profissional utiliza um equipamento específico com aplicadores que são posicionados na área a ser tratada. Estes aplicadores exercem sucção moderada na pele e tecido adiposo, enquanto resfriam a região a uma temperatura entre 0°C e -10°C.
+                    </p>
+                    <p class="mb-4">
+                        Este resfriamento controlado provoca a cristalização das células de gordura (adipócitos), levando-as a um processo chamado apoptose, que é a morte celular programada. Uma vez que as células de gordura morrem, o sistema imunológico do corpo as identifica como "resíduos" e, ao longo das semanas seguintes, as remove naturalmente através do sistema linfático.
+                    </p>
+                    <p class="mb-4">
+                        Cada sessão dura aproximadamente 40 a 60 minutos, dependendo da área tratada. O número de sessões necessárias varia de acordo com os objetivos individuais e a quantidade de gordura a ser reduzida.
+                    </p>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Quais áreas podem ser tratadas?</h3>
+                    <p class="mb-4">
+                        A criolipólise é eficaz para tratar diversos pontos do corpo onde há acúmulo de gordura localizada, incluindo:
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li>Abdômen</li>
+                        <li>Flancos ("pneuzinhos")</li>
+                        <li>Culotes</li>
+                        <li>Costas</li>
+                        <li>Braços</li>
+                        <li>Interno das coxas</li>
+                        <li>Submento (papada)</li>
+                    </ul>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Resultados e tempo de espera</h3>
+                    <p class="mb-4">
+                        É importante entender que a criolipólise não produz resultados imediatos. Como o corpo precisa eliminar naturalmente as células de gordura mortas, os primeiros resultados começam a aparecer cerca de 3 semanas após o procedimento, com resultados finais visíveis entre 2 e 3 meses.
+                    </p>
+                    <p class="mb-4">
+                        Estudos mostram que uma única sessão de criolipólise pode reduzir em até 25-30% a camada de gordura na área tratada. Este percentual pode aumentar com sessões adicionais, mas é importante ressaltar que os resultados variam de pessoa para pessoa.
+                    </p>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Vantagens da criolipólise</h3>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li><strong>Procedimento não invasivo:</strong> Não requer cortes, anestesia ou tempo de recuperação.</li>
+                        <li><strong>Sem tempo de inatividade:</strong> Você pode retornar às suas atividades normais imediatamente após o procedimento.</li>
+                        <li><strong>Segurança:</strong> É considerada uma técnica segura, com poucos efeitos colaterais.</li>
+                        <li><strong>Resultados duradouros:</strong> Uma vez que as células de gordura são eliminadas, elas não retornam, tornando os resultados potencialmente permanentes (desde que mantido o peso corporal).</li>
+                        <li><strong>Tratamento localizado:</strong> Permite focar exatamente nas áreas problemáticas que resistem à dieta e exercícios.</li>
+                    </ul>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Possíveis efeitos colaterais</h3>
+                    <p class="mb-4">
+                        A criolipólise é considerada segura, mas alguns efeitos colaterais temporários podem ocorrer:
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li>Vermelhidão e inchaço na área tratada</li>
+                        <li>Sensação de formigamento ou dormência</li>
+                        <li>Hematomas leves devido à sucção</li>
+                        <li>Sensibilidade temporária na região</li>
+                    </ul>
+                    <p class="mb-4">
+                        Estes sintomas geralmente desaparecem em poucos dias e não impedem a realização das atividades diárias.
+                    </p>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Quem é candidato à criolipólise?</h3>
+                    <p class="mb-4">
+                        A criolipólise é indicada para pessoas que:
+                    </p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li>Estão próximas do peso ideal, mas possuem pequenas áreas de gordura localizada</li>
+                        <li>Buscam um procedimento não invasivo para contorno corporal</li>
+                        <li>Possuem expectativas realistas sobre os resultados</li>
+                        <li>Têm pele com boa elasticidade</li>
+                    </ul>
+                    <p class="mb-4">
+                        É importante ressaltar que a criolipólise <strong>não é um tratamento para obesidade</strong> ou perda de peso significativa, mas sim para contorno corporal e redução de gordura localizada em áreas específicas.
+                    </p>
+
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-6 mb-4">Conclusão</h3>
+                    <p class="mb-4">
+                        A criolipólise revolucionou o mercado de estética ao oferecer uma alternativa segura, eficaz e não invasiva à lipoaspiração para a redução de gordura localizada. Seus resultados progressivos e naturais, aliados à ausência de tempo de recuperação, tornaram este procedimento extremamente popular.
+                    </p>
+                    <p class="mb-4">
+                        Na Clínica Alana Albuquerque, oferecemos a criolipólise com equipamentos de última geração e profissionais especializados que irão avaliar suas necessidades e desenvolver um plano de tratamento personalizado para ajudá-lo a atingir seus objetivos estéticos.
+                    </p>
+                    <p>
+                        Quer saber se a criolipólise é o tratamento ideal para você? Entre em contato conosco e agende uma avaliação!
+                    </p>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://wa.me/559912345678?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão%20de%20Criolipólise" target="_blank" class="bg-primary text-white py-3 px-6 rounded shadow-md hover:bg-primary/80 transition-colors font-montserrat inline-block">
+                        Agende Sua Sessão de Criolipólise
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="py-16 bg-primary/10">
+            <div class="container mx-auto px-4 max-w-xl text-center">
+                <h2 class="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-4">
+                    Receba dicas de beleza e bem-estar
+                </h2>
+                <p class="mb-8">
+                    Assine nossa newsletter e fique por dentro das últimas novidades em estética feminina, promoções exclusivas e dicas para realçar sua beleza natural.
+                </p>
+                <form class="flex flex-col md:flex-row gap-4">
+                    <input type="email" placeholder="Seu melhor e-mail" class="flex-grow p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" required>
+                    <button type="submit" class="bg-primary text-white py-3 px-6 rounded shadow-md hover:bg-primary/80 transition-colors font-montserrat">
+                        Assinar
+                    </button>
+                </form>
+                <p class="text-xs text-gray-500 mt-4">
+                    Respeitamos sua privacidade. Você pode cancelar a inscrição a qualquer momento.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-primary/10 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Clínica Alana Albuquerque</h3>
+                    <p class="mb-4">Seu espaço dedicado à estética e bem-estar feminino. Venha nos conhecer!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-primary transition-colors">Sobre Nós</a></li>
+                        <li><a href="servicos.html" class="hover:text-primary transition-colors">Serviços</a></li>
+                        <li><a href="contato.html" class="hover:text-primary transition-colors">Contato</a></li>
+                        <li><a href="blog.html" class="hover:text-primary transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Contato</h3>
+                    <address class="not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt text-primary mr-2"></i> Rua das Flores, 123, Centro</p>
+                        <p class="mb-2"><i class="fas fa-phone text-primary mr-2"></i> (XX) 9 1234-5678</p>
+                        <p class="mb-2"><i class="fas fa-envelope text-primary mr-2"></i> contato@clinicaalanaalbuquerque.com</p>
+                        <p><i class="fas fa-clock text-primary mr-2"></i> Seg-Sex: 9h-18h | Sáb: 9h-13h</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-primary/20 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Clínica Alana Albuquerque. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp flutuante -->
+    <a href="https://wa.me/559912345678?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary/80 transition-colors z-50 whatsapp-float">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

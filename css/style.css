@@ -1,0 +1,276 @@
+/* CSS Personalizado para Clínica Alana Albuquerque */
+
+/* Base styles */
+:root {
+    --primary-color: #744D24;
+    --primary-hover: #816340;
+    --white: #FFFFFF;
+    --dark: #333333;
+    --light: #F8F9FA;
+}
+
+/* Estilos para o carrossel de depoimentos */
+.testimonial-slide {
+    transition: opacity 0.5s ease;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+.testimonial-dot {
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-dot.active {
+    background-color: #816340;
+}
+
+/* Efeito hover nos cards de serviços */
+.service-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Efeito hover nos botões */
+button, .btn {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Melhorias de acessibilidade para foco nos elementos interativos */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: 2px solid #816340;
+    outline-offset: 2px;
+}
+
+/* Estilos para o formulário de contato */
+.form-input {
+    border: 1px solid #E2E8F0;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #816340;
+    box-shadow: 0 0 0 3px rgba(148, 113, 77, 0.2);
+}
+
+/* Estilos para animações suaves em toda a página */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos adicionais para o blog */
+.article-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para os artigos do blog */
+.prose {
+    max-width: 65ch;
+    color: var(--dark);
+}
+
+.prose h1, 
+.prose h2, 
+.prose h3, 
+.prose h4 {
+    color: #816340;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.prose h1 {
+    font-size: 2.25rem;
+}
+
+.prose h2 {
+    font-size: 1.875rem;
+}
+
+.prose h3 {
+    font-size: 1.5rem;
+}
+
+.prose p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.prose strong {
+    color: #816340;
+    font-weight: 700;
+}
+
+.prose a {
+    color: #816340;
+    text-decoration: underline;
+}
+
+.prose a:hover {
+    color: var(--primary-hover);
+}
+
+.prose ul, 
+.prose ol {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    padding-left: 1.625em;
+}
+
+.prose li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.prose blockquote {
+    border-left: 4px solid #816340;
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 1.5em 0;
+    color: #4A5568;
+}
+
+.prose img {
+    margin: 2em 0;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Estilos para o botão WhatsApp flutuante */
+.whatsapp-float {
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para as imagens */
+.img-hover {
+    transition: transform 0.5s ease-in-out;
+}
+
+.img-hover:hover {
+    transform: scale(1.03);
+}
+
+/* Responsividade - ajustes específicos para mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.75rem !important;
+    }
+
+    h3 {
+        font-size: 1.4rem !important;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Melhoria de legibilidade em textos sobre imagens */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para o rodapé */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll suave para toda a página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Efeitos hover personalizados */
+.hover-underline:hover {
+    text-decoration: underline;
+    text-decoration-color: #816340;
+}
+
+/* Animações para aparecer elementos durante o scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Borda decorativa para títulos */
+.fancy-title {
+    position: relative;
+    display: inline-block;
+}
+
+.fancy-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 60px;
+    height: 3px;
+    background-color: #816340;
+}
+
+/* Estilos para notificações e alertas */
+.notification {
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid transparent;
+}
+
+.notification.success {
+    background-color: #F0FFF4;
+    border-left-color: #68D391;
+}
+
+.notification.error {
+    background-color: #FFF5F5;
+    border-left-color: #FC8181;
+}
+
+.notification.info {
+    background-color: #EBFDFF;
+    border-left-color: #9DECF9;
+}
+
+.notification.warning {
+    background-color: #FFFAF0;
+    border-left-color: #F6AD55;
+}
+
+/* Classes de acessibilidade */
+.focus-visible:focus {
+    outline: 2px solid #816340;
+    outline-offset: 2px;
+} 

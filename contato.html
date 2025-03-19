@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Clínica Alana Albuquerque</title>
+    <meta name="description" content="Entre em contato com a Clínica Alana Albuquerque para agendar sua consulta ou obter mais informações sobre nossos serviços de estética.">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8A7142',
+                        light: '#E5E0D8'
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        opensans: ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-opensans bg-light">
+    <!-- Cabeçalho/Menu de navegação -->
+    <header class="fixed top-0 left-0 right-0 bg-primary shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/img/logoAlana.jpg" alt="Clínica Alana Albuquerque" class="h-12 mr-2">
+            </a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Home</a>
+                <a href="sobre.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Sobre Nós</a>
+                <a href="servicos.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Serviços</a>
+                <a href="contato.html" class="font-montserrat text-light hover:text-light/70 transition-colors font-medium">Contato</a>
+                <a href="blog.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Blog</a>
+            </div>
+            
+            <!-- Botão Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-light hover:text-light/70 transition-colors">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="hidden bg-primary w-full py-2 px-4 md:hidden">
+            <a href="index.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Home</a>
+            <a href="sobre.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Sobre Nós</a>
+            <a href="servicos.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Serviços</a>
+            <a href="contato.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors font-medium">Contato</a>
+            <a href="blog.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Blog</a>
+        </div>
+    </header>
+
+    <main class="pt-24"> <!-- Padding top para compensar o header fixo -->
+        <!-- Banner Contato -->
+        <section class="py-12 bg-primary/10">
+            <div class="container mx-auto px-4">
+                <h1 class="font-montserrat font-bold text-3xl md:text-4xl text-primary text-center mb-8">
+                    Entre em Contato
+                </h1>
+                <p class="text-lg max-w-3xl mx-auto text-center">
+                    Estamos prontos para atender você e esclarecer suas dúvidas sobre nossos serviços e tratamentos
+                </p>
+            </div>
+        </section>
+
+        <!-- Formulário e Informações de Contato -->
+        <section class="py-16 bg-light">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <!-- Formulário de Contato -->
+                    <div class="md:w-2/3">
+                        <h2 class="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-6">
+                            Envie-nos uma mensagem
+                        </h2>
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block mb-2">Nome completo</label>
+                                    <input type="text" id="name" name="name" placeholder="Seu nome" required class="form-input">
+                                </div>
+                                <div>
+                                    <label for="email" class="block mb-2">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required class="form-input">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block mb-2">Telefone</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(XX) 9 XXXX-XXXX" required class="form-input">
+                                </div>
+                                <div>
+                                    <label for="subject" class="block mb-2">Assunto</label>
+                                    <select id="subject" name="subject" required class="form-input">
+                                        <option value="">Selecione um assunto</option>
+                                        <option value="agendamento">Agendamento</option>
+                                        <option value="duvida">Dúvida sobre tratamentos</option>
+                                        <option value="orcamento">Orçamento</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-2">Mensagem</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Como podemos ajudar?" required class="form-input"></textarea>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" id="privacy" name="privacy" required class="mt-1 mr-2">
+                                <label for="privacy" class="text-sm">Concordo com a <a href="#" class="text-primary hover:underline">Política de Privacidade</a> da Clínica Alana Albuquerque</label>
+                            </div>
+                            <button type="submit" class="bg-primary text-light py-3 px-6 rounded shadow-md hover:bg-primary/80 transition-colors font-montserrat">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                        <!-- Mensagem de sucesso (oculta por padrão) -->
+                        <div id="success-message" class="hidden mt-6 p-4 bg-green-100 border-l-4 border-green-500 text-green-700">
+                            <p>Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Informações de Contato -->
+                    <div class="md:w-1/3">
+                        <h2 class="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-6">
+                            Informações de Contato
+                        </h2>
+                        <div class="bg-primary/10 p-6 rounded-lg shadow-md">
+                            <img src="https://images.pexels.com/photos/4969838/pexels-photo-4969838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Nossa recepção" class="w-full h-48 object-cover rounded-lg mb-6">
+                            <div class="mb-6">
+                                <h3 class="font-montserrat font-medium text-xl mb-3">Endereço</h3>
+                                <p class="mb-2 flex items-start">
+                                    <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                                    <span>Rua das Flores, 123, Centro<br/>Cidade - Estado, CEP 12345-678</span>
+                                </p>
+                                <a href="https://maps.google.com" target="_blank" class="text-primary hover:underline flex items-center ml-6">
+                                    <span>Ver no mapa</span>
+                                    <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h3 class="font-montserrat font-medium text-xl mb-3">Contatos</h3>
+                                <p class="mb-2 flex items-start">
+                                    <i class="fas fa-phone text-primary mt-1 mr-3"></i>
+                                    <span>(XX) 9 1234-5678</span>
+                                </p>
+                                <p class="mb-2 flex items-start">
+                                    <i class="fas fa-envelope text-primary mt-1 mr-3"></i>
+                                    <span>contato@clinicaalanaalbuquerque.com</span>
+                                </p>
+                                <p class="flex items-start">
+                                    <i class="fab fa-whatsapp text-primary mt-1 mr-3"></i>
+                                    <span>(XX) 9 8765-4321</span>
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-montserrat font-medium text-xl mb-3">Horário de Atendimento</h3>
+                                <p class="mb-2 flex items-start">
+                                    <i class="fas fa-clock text-primary mt-1 mr-3"></i>
+                                    <span>
+                                        Segunda a Sexta: 9h às 18h<br/>
+                                        Sábados: 9h às 13h<br/>
+                                        Domingos e Feriados: Fechado
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Redes Sociais -->
+                        <div class="mt-8">
+                            <h3 class="font-montserrat font-medium text-xl mb-4">Siga-nos nas Redes Sociais</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-primary text-light w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-primary text-light w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-primary text-light w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="#" class="bg-primary text-light w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa do Google -->
+        <section class="py-12 bg-primary/10">
+            <div class="container mx-auto px-4">
+                <h2 class="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-8 text-center">
+                    Como Chegar
+                </h2>
+                <!-- Iframe do Google Maps (placeholder atualizado para um mapa mais realista) -->
+                <div class="h-96 bg-white rounded-lg shadow-md overflow-hidden">
+                    <!-- Substitua o src pela URL do Google Maps da clínica real quando estiver disponível -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.596534253584!2d-34.9017984!3d-8.0475896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a48ed72541%3A0x9e336828291c11ec!2sRecife%2C%20PE!5e0!3m2!1spt-BR!2sbr!4v1688675786409!5m2!1spt-BR!2sbr"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ - Perguntas Frequentes -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-12 text-center">
+                    Perguntas Frequentes
+                </h2>
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <!-- Pergunta 1 -->
+                    <div class="border border-primary/20 rounded-lg overflow-hidden">
+                        <button class="faq-question w-full bg-white p-4 text-left flex justify-between items-center">
+                            <span class="font-montserrat font-medium text-lg">Como posso agendar uma consulta?</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-answer bg-primary/5 p-4 hidden">
+                            <p>Você pode agendar uma consulta através do nosso WhatsApp, telefone ou preenchendo o formulário de contato nesta página. Nossa equipe entrará em contato para confirmar sua data e horário.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pergunta 2 -->
+                    <div class="border border-primary/20 rounded-lg overflow-hidden">
+                        <button class="faq-question w-full bg-white p-4 text-left flex justify-between items-center">
+                            <span class="font-montserrat font-medium text-lg">Quanto tempo dura cada sessão de tratamento?</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-answer bg-primary/5 p-4 hidden">
+                            <p>A duração de cada sessão varia de acordo com o tratamento. Massagens e drenagens linfáticas geralmente duram cerca de 50 minutos, enquanto procedimentos como criolipólise podem levar entre 40 e 60 minutos por área tratada.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pergunta 3 -->
+                    <div class="border border-primary/20 rounded-lg overflow-hidden">
+                        <button class="faq-question w-full bg-white p-4 text-left flex justify-between items-center">
+                            <span class="font-montserrat font-medium text-lg">Quais formas de pagamento são aceitas?</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-answer bg-primary/5 p-4 hidden">
+                            <p>Aceitamos pagamentos em dinheiro, PIX, cartões de crédito e débito. Para pacotes de tratamento, também oferecemos opções de parcelamento em até 12x no cartão de crédito.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pergunta 4 -->
+                    <div class="border border-primary/20 rounded-lg overflow-hidden">
+                        <button class="faq-question w-full bg-white p-4 text-left flex justify-between items-center">
+                            <span class="font-montserrat font-medium text-lg">É necessário marcar horário com antecedência?</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-answer bg-primary/5 p-4 hidden">
+                            <p>Sim, recomendamos que todos os atendimentos sejam agendados com pelo menos 24 horas de antecedência para garantirmos a disponibilidade do profissional e o horário de sua preferência.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pergunta 5 -->
+                    <div class="border border-primary/20 rounded-lg overflow-hidden">
+                        <button class="faq-question w-full bg-white p-4 text-left flex justify-between items-center">
+                            <span class="font-montserrat font-medium text-lg">Oferecem consulta de avaliação antes do tratamento?</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-answer bg-primary/5 p-4 hidden">
+                            <p>Sim, realizamos uma avaliação completa antes de iniciar qualquer tratamento para entender suas necessidades e expectativas, além de identificar qual procedimento é mais adequado para o seu caso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-primary/10 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Clínica Alana Albuquerque</h3>
+                    <p class="mb-4">Seu espaço dedicado à estética e bem-estar feminino. Venha nos conhecer!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="sobre.html" class="hover:text-primary transition-colors">Sobre Nós</a></li>
+                        <li><a href="servicos.html" class="hover:text-primary transition-colors">Serviços</a></li>
+                        <li><a href="contato.html" class="hover:text-primary transition-colors">Contato</a></li>
+                        <li><a href="blog.html" class="hover:text-primary transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Contato</h3>
+                    <address class="not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt text-primary mr-2"></i> Rua das Flores, 123, Centro</p>
+                        <p class="mb-2"><i class="fas fa-phone text-primary mr-2"></i> (XX) 9 1234-5678</p>
+                        <p class="mb-2"><i class="fas fa-envelope text-primary mr-2"></i> contato@clinicaalanaalbuquerque.com</p>
+                        <p><i class="fas fa-clock text-primary mr-2"></i> Seg-Sex: 9h-18h | Sáb: 9h-13h</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-primary/20 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Clínica Alana Albuquerque. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp flutuante -->
+    <a href="https://wa.me/559912345678?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" class="fixed bottom-6 right-6 bg-primary text-light p-3 rounded-full shadow-lg hover:bg-primary/80 transition-colors z-50 whatsapp-float">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

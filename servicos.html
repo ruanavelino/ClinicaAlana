@@ -33,33 +33,33 @@
 <body class="font-opensans bg-light">
     <!-- Cabeçalho/Menu de navegação -->
     <header class="fixed top-0 left-0 right-0 bg-primary shadow-md z-50">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <nav class="container mx-auto px-6 sm:px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center">
                 <img src="assets/img/logoAlana.jpg" alt="Clínica Alana Albuquerque" class="h-12 mr-2">
             </a>
             
             <!-- Menu Desktop -->
             <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Home</a>
-                <a href="sobre.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Sobre Nós</a>
-                <a href="servicos.html" class="font-montserrat text-light hover:text-light/70 transition-colors font-medium">Serviços</a>
-                <a href="contato.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Contato</a>
-                <a href="blog.html" class="font-montserrat text-light hover:text-light/70 transition-colors">Blog</a>
+                <a href="index.html" class="font-montserrat text-light hover:text-light/70 transition-colors relative after:absolute after:bottom-[-5px] after:left-0 after:h-0.5 after:w-0 after:bg-light after:transition-all hover:after:w-full">INICIO</a>
+                <a href="servicos.html" class="font-montserrat text-light hover:text-light/70 transition-colors relative after:absolute after:bottom-[-5px] after:left-0 after:h-0.5 after:w-0 after:bg-light after:transition-all hover:after:w-full font-medium">PROCEDIMENTOS</a>
+                <a href="sobre.html" class="font-montserrat text-light hover:text-light/70 transition-colors relative after:absolute after:bottom-[-5px] after:left-0 after:h-0.5 after:w-0 after:bg-light after:transition-all hover:after:w-full">QUEM SOMOS</a>
+                <a href="contato.html" class="font-montserrat text-light hover:text-light/70 transition-colors relative after:absolute after:bottom-[-5px] after:left-0 after:h-0.5 after:w-0 after:bg-light after:transition-all hover:after:w-full">CONTATO</a>
+                <a href="blog.html" class="font-montserrat text-light hover:text-light/70 transition-colors relative after:absolute after:bottom-[-5px] after:left-0 after:h-0.5 after:w-0 after:bg-light after:transition-all hover:after:w-full">BLOG</a>
             </div>
             
             <!-- Botão Menu Mobile -->
-            <button id="mobile-menu-button" class="md:hidden text-light hover:text-light/70 transition-colors">
+            <button id="mobile-menu-button" class="md:hidden text-light hover:text-light/70 transition-colors navbar-icon-transition">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </nav>
         
         <!-- Menu Mobile (oculto por padrão) -->
         <div id="mobile-menu" class="hidden bg-primary w-full py-2 px-4 md:hidden">
-            <a href="index.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Home</a>
-            <a href="sobre.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Sobre Nós</a>
-            <a href="servicos.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors font-medium">Serviços</a>
-            <a href="contato.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Contato</a>
-            <a href="blog.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">Blog</a>
+            <a href="index.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">INICIO</a>
+            <a href="sobre.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">QUEM SOMOS</a>
+            <a href="servicos.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors font-medium">PROCEDIMENTOS</a>
+            <a href="contato.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">CONTATO</a>
+            <a href="blog.html" class="block py-2 font-montserrat text-light hover:text-light/70 transition-colors">BLOG</a>
         </div>
     </header>
 
@@ -68,10 +68,10 @@
         <section class="py-12 bg-primary/10">
             <div class="container mx-auto px-4">
                 <h1 class="font-montserrat font-bold text-3xl md:text-4xl text-primary text-center mb-8">
-                    Nossos Serviços
+                    Conheça Nossos Procedimentos
                 </h1>
                 <p class="text-lg max-w-3xl mx-auto text-center mb-12">
-                    Oferecemos uma variedade de tratamentos estéticos personalizados para atender as necessidades específicas de cada cliente, com foco em resultados e bem-estar.
+                    Oferecemos uma variedade de procedimentos estéticos personalizados para atender as necessidades específicas de cada cliente, com foco em resultados e bem-estar.
                 </p>
             </div>
         </section>
@@ -79,10 +79,6 @@
         <!-- Categorias de Serviços -->
         <section class="py-12 bg-light">
             <div class="container mx-auto px-4">
-                <h2 class="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-12 text-center">
-                    Conheça Nossos Tratamentos
-                </h2>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Drenagem Linfática -->
                     <div class="bg-light rounded-lg shadow-md overflow-hidden">
@@ -106,7 +102,7 @@
                             </ul>
                             <div class="flex justify-between items-center">
                                 <span class="text-primary font-montserrat font-bold text-lg">A partir de R$ 120,00</span>
-                                <a href="contato.html" class="bg-primary text-light py-2 px-4 rounded hover:bg-primary/80 transition-colors">Agendar</a>
+                                <a href="contato.html" class="bg-primary text-light py-2 px-6 rounded-full hover:shadow-md hover:scale-105 transition-all duration-300">Agendar</a>
                             </div>
                         </div>
                     </div>
@@ -133,7 +129,7 @@
                             </ul>
                             <div class="flex justify-between items-center">
                                 <span class="text-primary font-montserrat font-bold text-lg">A partir de R$ 350,00</span>
-                                <a href="contato.html" class="bg-primary text-light py-2 px-4 rounded hover:bg-primary/80 transition-colors">Agendar</a>
+                                <a href="contato.html" class="bg-primary text-light py-2 px-6 rounded-full hover:shadow-md hover:scale-105 transition-all duration-300">Agendar</a>
                             </div>
                         </div>
                     </div>
@@ -160,7 +156,7 @@
                             </ul>
                             <div class="flex justify-between items-center">
                                 <span class="text-primary font-montserrat font-bold text-lg">A partir de R$ 150,00</span>
-                                <a href="contato.html" class="bg-primary text-light py-2 px-4 rounded hover:bg-primary/80 transition-colors">Agendar</a>
+                                <a href="contato.html" class="bg-primary text-light py-2 px-6 rounded-full hover:shadow-md hover:scale-105 transition-all duration-300">Agendar</a>
                             </div>
                         </div>
                     </div>
@@ -187,7 +183,7 @@
                             </ul>
                             <div class="flex justify-between items-center">
                                 <span class="text-primary font-montserrat font-bold text-lg">A partir de R$ 130,00</span>
-                                <a href="contato.html" class="bg-primary text-light py-2 px-4 rounded hover:bg-primary/80 transition-colors">Agendar</a>
+                                <a href="contato.html" class="bg-primary text-light py-2 px-6 rounded-full hover:shadow-md hover:scale-105 transition-all duration-300">Agendar</a>
                             </div>
                         </div>
                     </div>
@@ -226,7 +222,7 @@
                                 <span>Avaliação corporal completa</span>
                             </li>
                         </ul>
-                        <a href="contato.html" class="block bg-primary text-light text-center py-2 rounded hover:bg-primary/80 transition-colors">
+                        <a href="contato.html" class="block bg-primary text-light text-center py-2 px-6 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
                             Contratar Pacote
                         </a>
                     </div>
@@ -259,7 +255,7 @@
                                 <span>Avaliação corporal mensal</span>
                             </li>
                         </ul>
-                        <a href="contato.html" class="block bg-primary text-light text-center py-2 rounded hover:bg-primary/80 transition-colors">
+                        <a href="contato.html" class="block bg-primary text-light text-center py-2 px-6 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
                             Contratar Pacote
                         </a>
                     </div>
@@ -295,7 +291,7 @@
                                 <span>Acompanhamento nutricional</span>
                             </li>
                         </ul>
-                        <a href="contato.html" class="block bg-primary text-light text-center py-2 rounded hover:bg-primary/80 transition-colors">
+                        <a href="contato.html" class="block bg-primary text-light text-center py-2 px-6 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300">
                             Contratar Pacote
                         </a>
                     </div>
@@ -312,11 +308,11 @@
                 <p class="max-w-3xl mx-auto mb-8 text-lg">
                     Entre em contato conosco hoje mesmo e agende uma avaliação gratuita. Nossa equipe está pronta para desenvolver um plano de tratamento personalizado para você.
                 </p>
-                <div class="flex flex-col md:flex-row justify-center gap-4">
-                    <a href="contato.html" class="bg-primary text-light py-3 px-6 rounded shadow-md hover:bg-primary/80 transition-colors font-montserrat">
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <a href="contato.html" class="bg-primary text-light py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-primary hover:scale-105 transition-all duration-300 font-montserrat border border-light/30">
                         Agendar Avaliação Gratuita
                     </a>
-                    <a href="https://wa.me/5581971202071?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços" target="_blank" class="bg-light text-primary py-3 px-6 rounded shadow-md hover:bg-primary/10 transition-colors font-montserrat border border-primary">
+                    <a href="https://wa.me/5581971202071?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços" target="_blank" class="bg-light/20 backdrop-blur-sm text-primary py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-light hover:scale-105 transition-all duration-300 font-montserrat border border-primary">
                         <i class="fab fa-whatsapp mr-2"></i> Fale Conosco no WhatsApp
                     </a>
                 </div>
@@ -346,11 +342,11 @@
                 <div>
                     <h3 class="font-montserrat font-bold text-xl text-primary mb-4">Links Rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
-                        <li><a href="sobre.html" class="hover:text-primary transition-colors">Sobre Nós</a></li>
-                        <li><a href="servicos.html" class="hover:text-primary transition-colors">Serviços</a></li>
-                        <li><a href="contato.html" class="hover:text-primary transition-colors">Contato</a></li>
-                        <li><a href="blog.html" class="hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="index.html" class="hover:text-primary transition-colors">INICIO</a></li>
+                        <li><a href="sobre.html" class="hover:text-primary transition-colors">QUEM SOMOS</a></li>
+                        <li><a href="servicos.html" class="hover:text-primary transition-colors">PROCEDIMENTOS</a></li>
+                        <li><a href="contato.html" class="hover:text-primary transition-colors">CONTATO</a></li>
+                        <li><a href="blog.html" class="hover:text-primary transition-colors">BLOG</a></li>
                     </ul>
                 </div>
                 <div>
